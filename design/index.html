@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Recipe page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(241, 230, 218);
+        /* background-color: rgb(254, 247, 251); */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+      }
+      body div {
+        background-color: white;
+        width: 50%;
+        border-radius: 20px;
+        padding: 3%;
+      }
+      body div img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      .list-title {
+        font-weight: bold;
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+        margin-bottom: 8px;
+        color: #700453; /* Tailwind 的 gray-700 色值，可自定义 */
+      }
+      .custom-list {
+        list-style-type: none; /* 去掉默认圆点 */
+        padding-left: 0;
+      }
+      .custom-list li::before {
+        content: '•';
+        font-family: Arial, sans-serif;
+        color: #700453;
+        font-size: 12px; /* 控制原点大小 */
+        margin-right: 20px;
+        line-height: 1; /* 避免垂直对齐出问题 */
+      }
+      .custom-list li {
+        color: #666;
+        padding-top: 10px;
+      }
+      .custom-list li strong {
+        color: #444;
+      }
+
+      .ol-list {
+        counter-reset: step-counter;
+        list-style: none;
+        padding-left: 0;
+      }
+      .ol-list li {
+        margin-bottom: 16px;
+        position: relative;
+        padding-left: 28px;
+        color: #666;
+      }
+      .ol-list li::before {
+        counter-increment: step-counter;
+        content: counter(step-counter) '.';
+        font-weight: bold;
+        color: #700453;
+        position: absolute;
+        left: 0;
+      }
+      .ol-list li strong {
+        color: #444;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="assets/images/image-omelette.jpeg" />
+      <h1 style="margin: 20px 0; color: #444">Simple Omelette Recipe</h1>
+      <p style="color: #666">
+        An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs
+        cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+      </p>
+      <div
+        style="
+          width: 100%;
+          height: auto;
+          padding: 25px;
+          padding-left: 30px;
+          border-radius: 15px;
+          display: flex;
+          justify-content: start;
+          background-color: rgb(254, 247, 251);
+          margin: 20px 0;
+          flex-direction: column;
+        "
+      >
+        <p class="list-title">Preparation time Total:</p>
+        <ul class="custom-list">
+          <li><strong>Total:</strong> Approximately 10 minutes</li>
+          <li><strong>Preparation:</strong> 5 minutes</li>
+          <li><strong>Cooking:</strong> 5 minutes</li>
+        </ul>
+      </div>
+
+      <p class="list-title" style="color: #903f27">Ingredients</p>
+      <ul class="custom-list">
+        <li>2-3 large eggs</li>
+        <li>Salt, to taste Pepper</li>
+        <li>Pepper, to taste</li>
+        <li>1 tablespoon of butter or oil</li>
+        <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+      </ul>
+      <hr style="margin: 40px 0; border: none; height: 0.2px; background-color: #b9b8b8" />
+
+      <p class="list-title" style="color: #903f27">Instructions</p>
+      <ol class="ol-list">
+        <li>
+          <strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper
+          until they are well mixed. You can add a tablespoon of water or milk for a fluffier
+          texture.
+        </li>
+        <li>
+          <strong>Heat the pan: </strong> Place a non-stick frying pan over medium heat and add butter or oil.
+        </li>
+        <li>
+          <strong>Cook the omelette:</strong> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.
+        </li>
+        <li>
+          <strong>Add fillings (optional): </strong> When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.
+        <li>
+          <strong>Fold and serve:</strong> As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.
+        </li>
+        <li>
+          <strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed.
+        </li>
+        </li>
+      </ol>
+      <div style="margin-top: 100px"></div>
+           Nutrition The table below shows nutritional values per serving without
+      the additional fillings. Calories 277kcal Carbs 0g Protein 20g Fat 22g
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Evan Fang</a>.
+    </div>
+  </body>
+</html>
